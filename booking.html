@@ -3,15 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact | Adv GroHair and GloSkin</title>
-    <link rel="stylesheet" href="./styles/style.css" />
-    <link rel="shortcut icon" href="img/logo.jpg" type="image/x-icon" />
+    <title>Advanced GroHair and GloSkin</title>
+    <link rel="shortcut icon" href="./img/hair.png" type="image/x-icon" />
+    <link rel="stylesheet" href="styles/style.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Toastify CSS -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
@@ -150,6 +158,7 @@
         </div>
       </div>
 
+      <!-- Main Header -->
       <header class="main-header">
         <div class="logo">
           <img src="./img/Logo-1.jpeg" alt="Logo" width="180px" />
@@ -160,7 +169,7 @@
           <a href="index.html">Home</a>
           <a href="about.html">About</a>
           <a href="service.html">Services</a>
-          <a href="contact.html" class="active">Contact</a>
+          <a href="contact.html">Contact</a>
           <a href="booking.html" class="btn-book mobile-only">Book Now</a>
         </nav>
 
@@ -175,113 +184,77 @@
         </div>
       </header>
     </div>
-    <section class="contact-hero">
-      <div class="contact-hero-overlay">
-        <div class="container1 text-center">
-          <h1>Contact Page</h1>
-          <p>
-            We’re here to help — get in touch with us for appointments,
-            questions, or feedback.
-          </p>
-        </div>
+    <div class="book-top-tag">
+      <span>Appointment</span>
+      <h1>Book An Appointment</h1>
+    </div>
+
+    <section class="container book-section">
+      <div class="book-form-wrapper">
+        <h2>Book Your Appointment</h2>
+        <form id="contactForm" class="book-form">
+          <input
+            type="text"
+            class="book-input"
+            name="firstName"
+            placeholder="First Name"
+            required
+          />
+          <input
+            type="text"
+            class="book-input"
+            name="lastName"
+            placeholder="Last Name"
+            required
+          />
+
+          <input
+            type="email"
+            class="book-input"
+            name="email"
+            placeholder="Your Email"
+            required
+          />
+          <input
+            type="tel"
+            class="book-input"
+            name="phone"
+            placeholder="Your Phone Number"
+            required
+          />
+          <input
+            type="date"
+            class="book-input"
+            name="date"
+            id="appointmentDate"
+            required
+          />
+
+          <select class="book-select" name="timeSlot" required>
+            <option value="" disabled selected>Select Time Slot</option>
+            <option value="10-11">10:00 AM - 11:00 AM</option>
+            <option value="11-12">11:00 AM - 12:00 PM</option>
+            <option value="12-13">12:00 PM - 1:00 PM</option>
+            <option value="13-14">1:00 PM - 2:00 PM</option>
+            <option value="14-15">2:00 PM - 3:00 PM</option>
+            <option value="15-16">3:00 PM - 4:00 PM</option>
+            <option value="16-17">4:00 PM - 5:00 PM</option>
+            <option value="17-18">5:00 PM - 6:00 PM</option>
+          </select>
+
+          <select class="book-select" name="treatment" required>
+            <option value="" disabled selected>Select Treatment</option>
+            <option value="facial">Facial</option>
+            <option value="hair">Hair</option>
+            <option value="skin">Skin</option>
+          </select>
+
+          <div class="book-button-wrapper">
+            <button type="submit" class="book-btn">Book Appointment</button>
+          </div>
+        </form>
       </div>
     </section>
-
-    <section class="contact-bg">
-      <!-- <div class="overlay"></div> -->
-      <div class="contact-container">
-        <div class="contact-wrapper">
-          <!-- Left Side: Contact Info -->
-          <div class="contact-info">
-            <h2>Contact Information</h2>
-
-            <div class="info-box">
-              <h3>📍 Address</h3>
-              <p>
-                First Floor, 88, E Car St, above HDFC Bank, Chidambaram, Tamil
-                Nadu 608001
-              </p>
-            </div>
-
-            <div class="info-box">
-              <h3>📞 Phone</h3>
-              <p>+91 9411656789</p>
-            </div>
-
-            <div class="info-box">
-              <h3>✉️ Email</h3>
-              <p>chidambaram@adgrohair.com</p>
-            </div>
-
-            <!-- <img src="contact-illustration.png" alt="Contact Us" class="illustration" /> -->
-          </div>
-
-          <!-- Right Side: Form -->
-          <div class="contact-form">
-            <h2 style="color: #ea2127; font-weight: bold">Get in Touch</h2>
-            <form id="contactForm">
-              <div style="display: flex; gap: 10px; flex-wrap: wrap">
-                <input
-                  type="text"
-                  name="firstName"
-                  placeholder="First Name*"
-                  required
-                  style="flex: 1"
-                />
-                <input
-                  type="text"
-                  name="lastName"
-                  placeholder="Last Name*"
-                  required
-                  style="flex: 1"
-                />
-              </div>
-
-              <input
-                type="email"
-                name="email"
-                placeholder="Email Address*"
-                required
-              />
-              <input
-                type="tel"
-                name="mobile"
-                placeholder="Phone Number*"
-                required
-              />
-
-              <input type="date" name="date" required />
-
-              <select name="timeSlot" required>
-                <option value="" disabled selected>Select Time Slot</option>
-                <option value="8am">8:00 AM – 9:00 AM</option>
-                <option value="9am">9:00 AM – 10:00 AM</option>
-                <option value="10am">10:00 AM – 11:00 AM</option>
-                <option value="11am">11:00 AM – 12:00 PM</option>
-                <option value="12pm">12:00 PM – 1:00 PM</option>
-                <option value="1pm">1:00 PM – 2:00 PM</option>
-                <option value="2pm">2:00 PM – 3:00 PM</option>
-                <option value="3pm">3:00 PM – 4:00 PM</option>
-                <option value="4pm">4:00 PM – 5:00 PM</option>
-                <option value="5pm">5:00 PM – 6:00 PM</option>
-                <option value="6pm">6:00 PM – 7:00 PM</option>
-                <option value="7pm">7:00 PM – 8:00 PM</option>
-              </select>
-
-              <textarea
-                name="message"
-                rows="5"
-                placeholder="Leave us a message"
-                required
-              ></textarea>
-
-              <button type="submit" class="submit-btn">Send Message</button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- Footer starts -->
     <section class="grofooter-section">
       <div class="grofooter-container">
@@ -293,8 +266,8 @@
             class="grofooter-logo"
           />
           <p class="grofooter-tagline">
-            Restore your confidence today with our expert hair restoration
-            solutions.<br />Book your consultation now!
+            Reveal your best self with advanced hair and skin treatments
+            tailored just for you.<br />Schedule your consultation now!
           </p>
         </div>
 
@@ -302,21 +275,21 @@
         <div class="grofooter-contact">
           <h3 class="grofooter-heading">Contact</h3>
           <p>
-            First Floor, 88, E Car St, above HDFC Bank, Chidambaram, Tamil Nadu
-            608001
+            KO City Tower,<br />
+            18, 7th St, TT Nagar, Sekkalai, Karaikudi, Tamil Nadu 630001
           </p>
 
           <div class="grofooter-contact-line">
             <span class="grofooter-icon">📞</span>
-            <a href="tel:++919411656789" class="grofooter-link"
-              >+91 9411656789</a
+            <a href="tel:+919575156789" class="grofooter-link"
+              >(+91)95751 56789</a
             >
           </div>
 
           <div class="grofooter-contact-line">
             <span class="grofooter-icon">📧</span>
-            <a href="mailto:chidambaram@adgrohair.com" class="grofooter-link">
-              chidambaram@adgrohair.com
+            <a href="mailto:karaikudi@adgrohair.com" class="grofooter-link">
+              karaikudi@adgrohair.com
             </a>
           </div>
         </div>
@@ -336,7 +309,7 @@
         <div class="grofooter-map">
           <h3 class="grofooter-heading">Locations</h3>
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3911.1340125160855!2d79.69362527481456!3d11.39781138879127!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a54c3c6d6145e8f%3A0xd45d742e497deb28!2sAdvanced%20GroHair%20%26%20GloSkin%20-%20Chidambaram!5e0!3m2!1sen!2sin!4v1750845445415!5m2!1sen!2sin"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3554.911246674422!2d78.77599377450929!3d10.074092171756496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b00679fa500a599%3A0x879cac9abb79079c!2sAdvanced%20GroHair%20%26%20GloSkin%20-%20Karaikudi!5e1!3m2!1sen!2sin!4v1750762336468!5m2!1sen!2sin"
             width="100%"
             height="200"
             style="border: 0"
@@ -347,77 +320,97 @@
         </div>
       </div>
     </section>
+
     <div class="grofooter-bottom">
       <p>
-        &copy; <span id="currentYear"></span> GroHair & GloSkin. All rights
-        reserved. Website created by
-        <a href="https://aradiscover.com" target="_blank" class="ara-link">
+        &copy; <span id="currentYear"></span> Advanced GroHair & GloSkin. All
+        rights reserved. Website created by
+        <a
+          href="https://discovertechnologies.co/"
+          target="_blank"
+          class="ara-link"
+        >
           ARA Discover Technologies - A unit of ARA Discoveries Pvt. Ltd.
         </a>
       </p>
     </div>
 
-    <!-- Footer End -->
-
+    <!-- ✅ Toastify JS -->
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script>
+      // Set today's date as min in the date input
       const dateInput = document.getElementById("appointmentDate");
       const today = new Date();
-
       const yyyy = today.getFullYear();
-      const mm = String(today.getMonth() + 1).padStart(2, '0');
-      const dd = String(today.getDate()).padStart(2, '0');
+      const mm = String(today.getMonth() + 1).padStart(2, "0");
+      const dd = String(today.getDate()).padStart(2, "0");
+      dateInput.setAttribute("min", `${yyyy}-${mm}-${dd}`);
 
-      const minDate = ${yyyy}-${mm}-${dd};
-      dateInput.setAttribute("min", minDate);
-    </script>
+      // Toastify show function
+      function showToast(message, isError = false) {
+        Toastify({
+          text: message,
+          duration: 3000,
+          gravity: "top",
+          position: "right",
+          close: true,
+          backgroundColor: isError ? "#EA2127" : "#4BB543",
+          stopOnFocus: true,
+        }).showToast();
+      }
 
-    <script>
+      // Form submission
       document
         .getElementById("contactForm")
         .addEventListener("submit", async function (e) {
           e.preventDefault();
 
           const form = e.target;
-
-          const data = {
+          const payload = {
             firstName: form.firstName.value.trim(),
             lastName: form.lastName.value.trim(),
             email: form.email.value.trim(),
+            phone: form.phone.value.trim(),
             date: form.date.value,
-            time: form.timeSlot.value,
-            message: form.message.value.trim(),
-            mobile: form.mobile.value,
+            timeSlot: form.timeSlot.value,
+            treatment: form.treatment.value,
           };
 
-          console.log("🚀 Sending data to server:", data);
+          console.log("Sending payload:", payload);
 
           try {
-            const res = await fetch(
-              "https://schoolcommunication-gmdtekepd3g3ffb9.canadacentral-01.azurewebsites.net/api/postMSMSForm/growandglowdemoFormchidambaram",
+            const response = await fetch(
+              "https://schoolcommunication-gmdtekepd3g3ffb9.canadacentral-01.azurewebsites.net/api/postMSMSForm/growandglowdemoFormkaraikudi",
               {
                 method: "POST",
                 headers: {
                   "Content-Type": "application/json",
                   Authorization: "Bearer 123",
                 },
-                body: JSON.stringify(data),
+                body: JSON.stringify(payload),
               }
             );
 
-            const result = await res.json();
+            const result = await response.json();
+            console.log("API Response:", result);
 
             if (!result.error) {
-              // Optional: show a temporary success alert before redirect
-              alert("✅ " + result.message);
-              window.location.href = "thankyou.html"; // 🚀 redirect
+              showToast("Email sent successfully!");
+
+              setTimeout(() => {
+                window.location.href = "thankyou.html";
+              }, 1500); // give the toast time to show before redirecting
+
+              form.reset();
             } else {
-              alert("❌ " + result.message);
+              showToast("Error: " + result.message, true);
             }
           } catch (err) {
-            console.error("⚠️ Something went wrong:", err);
-            alert("Something went wrong while submitting the form.");
+            console.error("Request failed", err);
+            showToast("Something went wrong. Please try again.", true);
           }
         });
     </script>
+    <!-- Footer End -->
   </body>
 </html>
