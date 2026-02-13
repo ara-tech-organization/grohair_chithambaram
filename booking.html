@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Advanced GroHair and GloSkin</title>
-    <link rel="shortcut icon" href="./img/hair.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="./img/logo.jpg" type="image/x-icon" />
     <link rel="stylesheet" href="styles/style.css" />
     <link
       rel="stylesheet"
@@ -228,9 +228,19 @@
 
           <select class="book-select" name="treatment" required>
             <option value="" disabled selected>Select Treatment</option>
-            <option value="facial">Facial</option>
-            <option value="hair">Hair</option>
-            <option value="skin">Skin</option>
+            <option value="Scalp MicroPigmentation">Scalp MicroPigmentation</option>
+            <option value="Eyebrow Transplantation">Eyebrow Transplantation</option>
+            <option value="Stem X Pro">Stem X Pro</option>
+            <option value="Meso Therapy">Meso Therapy</option>
+            <option value="Oxygen Laser Therapy">Oxygen Laser Therapy</option>
+            <option value="Skin Brightening Treatment">Skin Brightening Treatment</option>
+            <option value="Q-Switch">Q-Switch</option>
+            <option value="Hydra Facial">Hydra Facial</option>
+            <option value="Laser Hair Removal">Laser Hair Removal</option>
+            <option value="RF Anti Aging Facial">RF Anti Aging Facial</option>
+            <option value="Botox">Botox</option>
+            <option value="Microblading">Microblading</option>
+            <option value="Wart Removal">Wart Removal</option>
           </select>
 
           <div class="book-button-wrapper">
@@ -338,7 +348,7 @@
           gravity: "top",
           position: "right",
           close: true,
-          backgroundColor: isError ? "#EA2127" : "#4BB543",
+          style: { background: isError ? "#EA2127" : "#4BB543" },
           stopOnFocus: true,
         }).showToast();
       }
@@ -354,10 +364,11 @@
             firstName: form.firstName.value.trim(),
             lastName: form.lastName.value.trim(),
             email: form.email.value.trim(),
-            phone: form.phone.value.trim(),
+            Mobile: form.phone.value.trim(),
             date: form.date.value,
             timeSlot: form.timeSlot.value,
             treatment: form.treatment.value,
+            City: "Chidambaram",
           };
 
           console.log("Sending payload:", payload);
