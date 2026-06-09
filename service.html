@@ -198,7 +198,7 @@
 
       <div class="service-display" id="serviceDisplay">
         <div class="service-image">
-          <img id="serviceImg" src="./img/11.png" alt="Service" />
+          <img id="serviceImg" src="./img/Scalp MicroPigmentation.png" alt="Service" />
         </div>
         <div class="service-text">
           <h3 id="serviceTitle">Scalp MicroPigmentation</h3>
@@ -564,6 +564,7 @@
         },
         "Meso Therapy": {
           img: "./img/Meso Therapy.png",
+          position: "center 20%",
           desc: [
             "Micro-injections deliver nutrients directly into the scalp to nourish follicles.",
             "Boosts blood flow and revitalizes hair at the root level.",
@@ -588,6 +589,7 @@
         },
         "Q-Switch": {
           img: "./img/Q-Switch.png",
+          position: "right center",
           desc: [
             "Precision laser treatment to target pigmentation, melasma, and sun damage.",
             "Also used for safe and effective tattoo removal.",
@@ -612,6 +614,7 @@
         },
         "RF Anti Aging Facial": {
           img: "./img/RF Anti Aging Facial.png",
+          position: "center 30%",
           desc: [
             "Non-invasive facial using radio frequency to stimulate collagen production.",
             "Lifts sagging skin, smooths fine lines, and tightens the jawline.",
@@ -647,10 +650,11 @@
           tabs.forEach((t) => t.classList.remove("active"));
           tab.classList.add("active");
 
-          const serviceName = tab.textContent;
+          const serviceName = tab.textContent.trim();
           const data = services[serviceName];
 
           img.src = data.img;
+          img.style.objectPosition = data.position || "center center";
           title.textContent = serviceName;
           // price.textContent = data.price; // keep commented if not using price
           desc.innerHTML = data.desc.map((line) => `• ${line}`).join("<br>");
